@@ -1,6 +1,6 @@
 {
 	"name": "codeowners-utils",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Utilities for working with CODEOWNERS files",
 	"main": "dist/codeowners-utils.js",
 	"scripts": {
