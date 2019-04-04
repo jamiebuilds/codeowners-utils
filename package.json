@@ -45,5 +45,11 @@
 		"require": [
 			"ts-node/register"
 		]
+	},
+	"dependencies": {
+		"cross-spawn": "6.0.5",
+		"find-up": "3.0.0",
+		"ignore": "5.0.6",
+		"locate-path": "3.0.0"
 	}
 }
