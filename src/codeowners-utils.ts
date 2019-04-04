@@ -23,11 +23,11 @@ export interface CodeOwnersEntry {
  * of the file).
  */
 export function parse(str: string): Array<CodeOwnersEntry> {
-	let entries = []
+	let entries: Array<CodeOwnersEntry> = []
 	let lines = str.split("\n")
 
-	lines.forEach((line, idx) => {
-		let [content, comment] = line.split("#")
+	lines.forEach((entry, idx) => {
+		let [content, comment] = entry.split("#")
 		let trimmed = content.trim()
 		if (trimmed === "") return
 		let [pattern, ...owners] = trimmed.split(/\s+/)
