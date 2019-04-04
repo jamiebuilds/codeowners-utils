@@ -15,6 +15,7 @@ let readFile = util.promisify(fs.readFile)
 export interface CodeOwnersEntry {
 	pattern: string
 	owners: Array<string>
+	line: number
 }
 
 /**
@@ -25,13 +26,14 @@ export function parse(str: string): Array<CodeOwnersEntry> {
 	let entries = []
 	let lines = str.split("\n")
 
-	for (let line of lines) {
+	lines.forEach((line, idx) => {
 		let [content, comment] = line.split("#")
 		let trimmed = content.trim()
-		if (trimmed === "") continue
+		if (trimmed === "") return
 		let [pattern, ...owners] = trimmed.split(/\s+/)
-		entries.push({ pattern, owners })
-	}
+		let line = idx + 1
+		entries.push({ pattern, owners, line })
+	})
 
 	return entries.reverse()
 }
