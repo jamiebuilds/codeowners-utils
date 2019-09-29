@@ -123,7 +123,7 @@ function spawn(
 	return new Promise((resolve, reject) => {
 		let proc = crossSpawn(cmd, args, opts)
 
-		proc.stdout.on("data", onData)
+		proc.stdout!.on("data", onData)
 
 		proc.on("error", reject)
 		proc.on("close", code => {
