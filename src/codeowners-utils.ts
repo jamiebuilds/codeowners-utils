@@ -50,7 +50,7 @@ export let CODEOWNERS_PATHS = [
  * Find the path of the CODEOWNERS file from the current working directory.
  */
 export async function findOwnersPath(cwd: string): Promise<string | null> {
-	let git = await findUp(".git/", { cwd })
+	let git = await findUp(".git/", { cwd, type: "directory" })
 	if (!git) return null
 
 	let root = path.dirname(git)
