@@ -26,16 +26,13 @@
 	},
 	"homepage": "https://github.com/jamiebuilds/codeowners-utils#readme",
 	"devDependencies": {
-		"@types/cross-spawn": "^6.0.0",
-		"@types/find-up": "^2.1.1",
-		"@types/locate-path": "^2.0.0",
+		"@types/cross-spawn": "^6.0.1",
 		"@types/node": "^10.12.18",
-		"@types/strip-indent": "^2.0.0",
-		"ava": "^1.1.0",
-		"prettier": "^1.16.1",
-		"strip-indent": "^2.0.0",
-		"ts-node": "^8.0.1",
-		"typescript": "^3.2.4"
+		"ava": "^3.8.1",
+		"prettier": "^2.0.5",
+		"strip-indent": "^3.0.0",
+		"ts-node": "^8.10.1",
+		"typescript": "^3.8.3"
 	},
 	"ava": {
 		"compileEnhancements": false,
